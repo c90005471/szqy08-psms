@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="60d54c92-c6bb-4d74-9ca2-ca57e0f671e3" name="Default" comment="提交人：陈建&#10;提交原因：权限标签" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Oracle - @localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Oracle - @localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="SCOTT: schema" type="3abd1b6a:OraImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Oracle - @localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="SCOTT: schema" type="3abd1b6a:OraImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Oracle - @localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="SCOTT: schema" type="3abd1b6a:OraImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="EMP: table" type="942f455b:OraImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindBugs-IDEA-Workspace">
+    <toolWindowEditorPreview>false</toolWindowEditorPreview>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven-respository" />
+        <option name="mavenHome" value="D:/Program Files/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\Program Files\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="#JAVA_HOME" />
+    <option name="runMavenInBackground" value="false" />
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectId" id="1dzwnJStYdGGpy7q5HSbkkuVUEu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="oracle" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/main/java/com/aaa/controller/UserController.java" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.aaa.entity" />
+      <recent name="com.aaa.aop" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ideaSpace\qy111-mp\src\main\resources\templates\menu" />
+      <recent name="D:\ideaSpace\qy111-mp\src\main\resources\templates\user" />
+      <recent name="D:\ideaSpace\qy111-mp\src\main\resources\templates\role" />
+      <recent name="D:\ideaSpace\qy111-mp\src\main\resources\templates\dept" />
+      <recent name="D:\ideaSpace\qy111-mp\src\main\java\com\aaa\shiro" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Szqy08PsmsApplication">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisCache.findAllUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="szqy08-psms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aaa.cache.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.aaa.cache" />
+      <option name="MAIN_CLASS_NAME" value="com.aaa.cache.MybatisCache" />
+      <option name="METHOD_NAME" value="findAllUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="szqy08-psms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aaa.redis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.aaa.redis" />
+      <option name="MAIN_CLASS_NAME" value="com.aaa.redis.RedisTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisTest.getValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="szqy08-psms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aaa.redis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.aaa.redis" />
+      <option name="MAIN_CLASS_NAME" value="com.aaa.redis.RedisTest" />
+      <option name="METHOD_NAME" value="getValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisTest.setHash" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="szqy08-psms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aaa.redis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.aaa.redis" />
+      <option name="MAIN_CLASS_NAME" value="com.aaa.redis.RedisTest" />
+      <option name="METHOD_NAME" value="setHash" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisTest.setString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="szqy08-psms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aaa.redis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.aaa.redis" />
+      <option name="MAIN_CLASS_NAME" value="com.aaa.redis.RedisTest" />
+      <option name="METHOD_NAME" value="setString" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Szqy08PsmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="szqy08-psms" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.aaa.Szqy08PsmsApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.RedisTest.setString" />
+      <item itemvalue="JUnit.RedisTest" />
+      <item itemvalue="JUnit.RedisTest.getValue" />
+      <item itemvalue="JUnit.RedisTest.setHash" />
+      <item itemvalue="JUnit.MybatisCache.findAllUser" />
+      <item itemvalue="Spring Boot.Szqy08PsmsApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MybatisCache.findAllUser" />
+        <item itemvalue="JUnit.RedisTest.setHash" />
+        <item itemvalue="JUnit.RedisTest.getValue" />
+        <item itemvalue="JUnit.RedisTest" />
+        <item itemvalue="JUnit.RedisTest.setString" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpringBeansView">
+    <option name="showFilesets" value="false" />
+    <option name="showImplicitBeans" value="false" />
+    <option name="showInfrastructureBeans" value="false" />
+    <option name="showDoc" value="false" />
+    <option name="showGraph" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\teacher\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="60d54c92-c6bb-4d74-9ca2-ca57e0f671e3" name="Default" comment="" />
+      <created>1592286389700</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592286389700</updated>
+      <workItem from="1592286391824" duration="627000" />
+      <workItem from="1592287286233" duration="2495000" />
+      <workItem from="1592290058688" duration="8492000" />
+      <workItem from="1592300649133" duration="599000" />
+      <workItem from="1592352774060" duration="340000" />
+      <workItem from="1592358103561" duration="3270000" />
+      <workItem from="1592363427731" duration="48000" />
+      <workItem from="1592363534821" duration="2382000" />
+      <workItem from="1592368564599" duration="13787000" />
+      <workItem from="1592443424775" duration="13073000" />
+      <workItem from="1592574779444" duration="452000" />
+      <workItem from="1592612925805" duration="8907000" />
+      <workItem from="1592787073115" duration="5602000" />
+      <workItem from="1592806264775" duration="8045000" />
+      <workItem from="1592826101908" duration="836000" />
+      <workItem from="1592872777234" duration="1372000" />
+      <workItem from="1592874366958" duration="937000" />
+      <workItem from="1592877118570" duration="1337000" />
+      <workItem from="1592882756348" duration="1357000" />
+      <workItem from="1592890483976" duration="13073000" />
+      <workItem from="1592908971088" duration="1367000" />
+      <workItem from="1592918640507" duration="666000" />
+      <workItem from="1592961100901" duration="4193000" />
+      <workItem from="1592967826313" duration="16945000" />
+      <workItem from="1593249138374" duration="1050000" />
+      <workItem from="1593306257617" duration="926000" />
+      <workItem from="1593307313909" duration="1445000" />
+      <workItem from="1593309628400" duration="1009000" />
+      <workItem from="1593310706198" duration="378000" />
+      <workItem from="1593311480682" duration="396000" />
+      <workItem from="1593315461990" duration="1031000" />
+      <workItem from="1593316543944" duration="1829000" />
+      <workItem from="1593331663447" duration="3989000" />
+      <workItem from="1593337027144" duration="934000" />
+      <workItem from="1593348366352" duration="334000" />
+      <workItem from="1593348813674" duration="579000" />
+      <workItem from="1593349822705" duration="1753000" />
+      <workItem from="1593352041154" duration="486000" />
+      <workItem from="1593352825637" duration="406000" />
+      <workItem from="1593353306575" duration="762000" />
+      <workItem from="1593356077025" duration="712000" />
+      <workItem from="1593357702067" duration="2274000" />
+      <workItem from="1593402336166" duration="854000" />
+      <workItem from="1593419716036" duration="1424000" />
+      <workItem from="1593427221563" duration="690000" />
+      <workItem from="1593434346617" duration="139000" />
+      <workItem from="1593434525962" duration="343000" />
+      <workItem from="1593436820172" duration="284000" />
+      <workItem from="1593437231074" duration="416000" />
+      <workItem from="1593437685825" duration="605000" />
+      <workItem from="1593438480943" duration="882000" />
+      <workItem from="1593439414711" duration="214000" />
+      <workItem from="1593439818120" duration="69000" />
+      <workItem from="1593441401898" duration="3957000" />
+      <workItem from="1593478444558" duration="630000" />
+      <workItem from="1593526264530" duration="3803000" />
+      <workItem from="1593531227500" duration="1726000" />
+      <workItem from="1593558517045" duration="691000" />
+      <workItem from="1593573970963" duration="9368000" />
+      <workItem from="1593922581720" duration="4785000" />
+      <workItem from="1593961323532" duration="348000" />
+      <workItem from="1594007196107" duration="3147000" />
+      <workItem from="1594029990434" duration="941000" />
+      <workItem from="1594169978896" duration="369000" />
+      <workItem from="1594193330190" duration="199000" />
+      <workItem from="1594197688756" duration="36000" />
+      <workItem from="1594352324186" duration="902000" />
+      <workItem from="1594379172168" duration="1271000" />
+      <workItem from="1594428694684" duration="1716000" />
+      <workItem from="1594454341018" duration="116000" />
+      <workItem from="1594455680154" duration="97000" />
+      <workItem from="1594781884825" duration="5027000" />
+      <workItem from="1594802923656" duration="610000" />
+      <workItem from="1594863981035" duration="597000" />
+      <workItem from="1594866144675" duration="639000" />
+      <workItem from="1594869394687" duration="895000" />
+      <workItem from="1594881005247" duration="14000" />
+      <workItem from="1594886957883" duration="726000" />
+      <workItem from="1594899227848" duration="2360000" />
+      <workItem from="1594951920385" duration="1022000" />
+      <workItem from="1594955216278" duration="391000" />
+      <workItem from="1594955656958" duration="957000" />
+      <workItem from="1594960145701" duration="243000" />
+      <workItem from="1594960518929" duration="6541000" />
+      <workItem from="1595038371264" duration="14241000" />
+      <workItem from="1595064130859" duration="1295000" />
+      <workItem from="1595068166029" duration="285000" />
+    </task>
+    <task id="LOCAL-00001" summary="提交人：陈建&#10;提交原因：优化代码">
+      <created>1592893932548</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592893932548</updated>
+    </task>
+    <task id="LOCAL-00002" summary="提交人：陈建&#10;提交原因：用户添加功能实现">
+      <created>1592909062077</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1592909062077</updated>
+    </task>
+    <task id="LOCAL-00003" summary="提交人：陈建&#10;提交原因：用户管理多条件查询">
+      <created>1592984028258</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1592984028258</updated>
+    </task>
+    <task id="LOCAL-00004" summary="提交人：陈建&#10;提交原因：菜单管理">
+      <created>1592989702740</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1592989702740</updated>
+    </task>
+    <task id="LOCAL-00005" summary="提交人：陈建&#10;提交原因：权限标签">
+      <created>1593334740062</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1593334740062</updated>
+    </task>
+    <task id="LOCAL-00006" summary="提交人：陈建&#10;提交原因：权限标签">
+      <created>1595068335712</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1595068335712</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="提交人：陈建&#10;提交原因：优化代码" />
+    <MESSAGE value="提交人：陈建&#10;提交原因：用户添加功能实现" />
+    <MESSAGE value="提交人：陈建&#10;提交原因：用户管理多条件查询" />
+    <MESSAGE value="提交人：陈建&#10;提交原因：菜单管理" />
+    <MESSAGE value="提交人：陈建&#10;提交原因：权限标签" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交人：陈建&#10;提交原因：权限标签" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="471" y="211" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1593926876659">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="471" y="211" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1366.728@0.0.1366.728" timestamp="1593926876659" />
+    <state x="88" y="39" width="1174" height="689" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595057268466">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="88" y="39" width="1174" height="689" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1595057268466" />
+    <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser" timestamp="1593530982448">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1593530982448" />
+    <state x="462" y="223" width="441" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1593592922095">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="462" y="223" width="441" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1593592922095" />
+    <state x="270" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1594960578893">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="270" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1594960578893" />
+    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1595068573195">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1595068573195" />
+    <state x="463" y="113" key="FileChooserDialogImpl" timestamp="1595068505126">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="113" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595068505125" />
+    <state width="1286" height="91" key="GridCell.Tab.0.bottom" timestamp="1595061703649">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1286" height="91" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595061703649" />
+    <state width="1322" height="174" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1593446472269" />
+    <state width="1286" height="91" key="GridCell.Tab.0.center" timestamp="1595061703649">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1286" height="91" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595061703649" />
+    <state width="1322" height="174" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1593446472269" />
+    <state width="1286" height="91" key="GridCell.Tab.0.left" timestamp="1595061703648">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1286" height="91" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595061703648" />
+    <state width="1322" height="174" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1593446472269" />
+    <state width="1286" height="91" key="GridCell.Tab.0.right" timestamp="1595061703649">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1286" height="91" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595061703649" />
+    <state width="1322" height="174" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1593446472269" />
+    <state width="1286" height="91" key="GridCell.Tab.1.bottom" timestamp="1595061703649">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1286" height="91" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595061703649" />
+    <state width="1322" height="253" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1593446472263" />
+    <state width="1286" height="91" key="GridCell.Tab.1.center" timestamp="1595061703649">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1286" height="91" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1595061703649" />
+    <state width="1322" height="253" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1593446472263" />
+    <state width="1286" height="91" key="GridCell.Tab.1.left" timestamp="1595061703649">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1286" height="91" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1595061703649" />
+    <state width="1322" height="253" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1593446472263" />
+    <state width="1286" height="91" key="GridCell.Tab.1.right" timestamp="1595061703649">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1286" height="91" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1595061703649" />
+    <state width="1322" height="253" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1593446472263" />
+    <state x="213" y="20" key="Maven.ArtifactSearchDialog" timestamp="1593530913796">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="213" y="20" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1593530913796" />
+    <state x="254" y="26" key="Registry" timestamp="1594782351684">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="254" y="26" key="Registry/0.0.1366.728@0.0.1366.728" timestamp="1594782351684" />
+    <state x="184" y="0" width="1142" height="715" key="SettingsEditor" timestamp="1595068452360">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="0" width="1142" height="715" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1595068452360" />
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1593479023347" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1593922601923">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1593922601923" />
+    <state x="359" y="96" width="647" height="534" key="find.popup" timestamp="1595057060581">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="359" y="96" width="647" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1595057060581" />
+    <state x="477" y="228" key="git4idea.rebase.GitRebaseDialog" timestamp="1595068420859">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="477" y="228" key="git4idea.rebase.GitRebaseDialog/0.0.1366.728@0.0.1366.728" timestamp="1595068420859" />
+    <state x="57" y="0" key="new project wizard" timestamp="1594801337740">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="57" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1594801337740" />
+    <state x="359" y="210" width="716" height="306" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1595064186809">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="359" y="210" width="716" height="306" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1366.728@0.0.1366.728" timestamp="1595064186809" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1594971345585">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1594971345585" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="joinPointArgs[0]" />
+        <watch expression="toObject" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>qy111-mp</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
