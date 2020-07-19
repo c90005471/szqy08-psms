@@ -2,45 +2,156 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>显示权限树页面</title>
+    <title>角色管理页面</title>
     <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
     <script th:src="@{/layui/layui.js}"></script>
 </head>
 <body>
-    <h1>显示权限树</h1>
+<script type="text/html" id="toolbarDemo">
     <div class="layui-btn-container">
-        <button type="button" class="layui-btn layui-btn-sm" lay-demo="getChecked">获取选中节点数据</button>
-        <button type="button" class="layui-btn layui-btn-sm" lay-demo="setChecked">勾选指定节点</button>
-        <button type="button" class="layui-btn layui-btn-sm" lay-demo="reload">重载实例</button>
+        <button class="layui-btn layui-btn-sm" lay-event="addRole">添加角色</button>
     </div>
+</script>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delete">删除</a>
+</script>
 
-    <div id="test12" class="demo-tree-more"></div>
+    <form class="layui-form" action="" id="save_role_form" style="display: none">
+        <div class="layui-form-item">
+            <label class="layui-form-label">角色名称</label>
+            <div class="layui-input-inline">
+                <input type="text" name="roleName" required lay-verify="required" placeholder="请输角色名称"
+                       autocomplete="off"
+                       class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">角色关键字</label>
+            <div class="layui-input-inline">
+                <input type="text" name="roleKey" required lay-verify="required" placeholder="请输入角色关键字" autocomplete="off"
+                       class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">排序</label>
+            <div class="layui-input-inline">
+                <input type="text" name="roleSort" required lay-verify="required" placeholder="请输入序号" autocomplete="off"
+                       class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">状态</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="status" lay-skin="switch" lay-text="可用|禁用" checked value="0">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">备注</label>
+            <div class="layui-input-inline">
+                <input type="text" name="remark"  placeholder="请输入序号" autocomplete="off"
+                       class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">菜单权限</label>
+            <div class="layui-input-inline">
+                <input type="hidden" name="menus">
+                <div id="menuTree" class="demo-tree-more"></div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formSaveRole">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+
+<table id="roleTable" lay-filter="roleTableFilter"></table>
 </body>
 <script>
-    layui.use(['tree', 'util','jquery'], function() {
-        var $ = layui.jquery;
-       var  tree=layui.tree;
-        $.ajax({
-            url: '/menu/findAllMenus',
-            dataType: 'json',
-            contentType: "application/json;charset=UTF-8",
-            type: 'GET',
-            success: function (result) {
-                //基本演示
-                tree.render({
-                    elem: '#test12'
-                    , data: result
-                    , showCheckbox: true  //是否显示复选框
-                    , id: 'demoId1'
-                    , isJump: true //是否允许点击节点时弹出新窗口跳转
-                    , click: function (obj) {
-                        var data = obj.data;  //获取当前点击的节点数据
-                        layer.msg('状态：' + obj.state + '<br>节点数据：' + JSON.stringify(data));
+    layui.use(['table', 'tree', 'util', 'jquery','layer', 'form'], function () {
+        let $ = layui.jquery;
+        let table = layui.table;
+        let tree = layui.tree;
+        let form=layui.form;
+        let layer= layui.layer;
+
+
+        //第一个实例
+        let myTable = table.render({
+            elem: '#roleTable'
+            , id: 'tableReload'//重载数据表格
+            , height: 312
+            , url: '/role/findAllRoles' //数据接口
+            , toolbar: '#toolbarDemo'//此处的id是html代码段
+            , cols: [
+                [ //表头
+                    {field: 'roleId', title: '角色编号', width: 100, sort: true, fixed: 'left', checkbox: true}
+                    , {field: 'roleName', title: '名称', width: 100}
+                    , {field: 'roleKey', title: '角色关键字', width: 120}
+                    , {field: 'roleSort', title: '排序', width: 80, sort: true}
+                    , {field: 'status', title: '状态', width: 80}
+                    , {field: 'createBy', title: '创建人', width: 80}
+                    , {field: 'createTime', title: '创建时间', width: 135}
+                    , {field: 'updateBy', title: '修改人', width: 80}
+                    , {field: 'updateTime', title: '修改时间', width: 135}
+                    , {field: 'remark', title: '备注', width: 80}
+                    , {title: '操作', width: 115, toolbar: '#barDemo'}
+                ]]
+        });
+        //监听头工具栏事件
+        table.on('toolbar(roleTableFilter)', function (obj) {
+            if (obj.event === 'addRole') {
+                $.ajax({
+                    url: '/menu/findAllMenus',
+                    dataType: 'json',
+                    contentType: "application/json;charset=UTF-8",
+                    type: 'GET',
+                    success: function (result) {
+                        //基本演示
+                        tree.render({
+                            elem: '#menuTree'
+                            , data: result
+                            , showCheckbox: true  //是否显示复选框
+                            , id: 'roleTree'
+                            , isJump: true //是否允许点击节点时弹出新窗口跳转
+
+                        });
                     }
+                })
+                layer.open({
+                    title: '添加角色',
+                    type: 1,
+                    content: $("#save_role_form"),
+                    area: ['450px', '430px']
                 });
             }
-        })
-
+            ;
+        });
+        //增加角色表单提交
+        form.on('submit(formSaveRole)', function (data) {
+            //layer.msg(JSON.stringify(data.field));
+            data.field.status = data.field.status ? 0:1;
+            data.field.menus=tree.getChecked('roleTree');
+            /*let checkedData= tree.getChecked('roleTree')*/
+            console.log("==================")
+            console.log(data.field)
+            $.ajax({
+                url: '/role/saveRole',
+                dataType: 'json',
+                type: 'POST',
+                contentType: "application/json;charset=UTF-8",
+                data: JSON.stringify(data.field),
+                success: function (result) {
+                    layer.closeAll();//关闭对话框
+                    layer.msg(result.msg);
+                    myTable.reload();//重新加载表格数据
+                }
+            })
+            return false;
+        });
 
     });
 </script>

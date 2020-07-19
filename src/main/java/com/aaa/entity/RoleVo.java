@@ -1,8 +1,13 @@
 package com.aaa.entity;
 
-import lombok.*;
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.enums.IdType;
+import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
 
 /**
  * <p>
@@ -13,9 +18,6 @@ import java.io.Serializable;
  * @since 2020-07-09
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-@RequiredArgsConstructor
 public class RoleVo implements  Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -23,18 +25,58 @@ public class RoleVo implements  Serializable {
     /**
      * 角色ID
      */
-    @NonNull
+    @TableId(value = "role_id", type = IdType.AUTO)
     private Integer roleId;
     /**
      * 角色名称
      */
-    @NonNull
-    private String roleKey;
-
+    @TableField("role_name")
+    private String roleName;
     /**
-     * 是否选中，选中的话checked="checked",不选中为空
+     * 角色权限字符串
      */
-    private String checked;
+    @TableField("role_key")
+    private String roleKey;
+    /**
+     * 显示顺序
+     */
+    @TableField("role_sort")
+    private Integer roleSort;
+    /**
+     * 角色状态（0正常 1停用）
+     */
+    private String status;
+    /**
+     * 删除标志（0代表存在 2代表删除）
+     */
+    @TableField("del_flag")
+    private String delFlag;
+    /**
+     * 创建者
+     */
+    @TableField("create_by")
+    private String createBy;
+    /**
+     * 创建时间
+     */
+    @TableField("create_time")
+    private Date createTime;
+    /**
+     * 更新者
+     */
+    @TableField("update_by")
+    private String updateBy;
+    /**
+     * 更新时间
+     */
+    @TableField("update_time")
+    private Date updateTime;
+    /**
+     * 备注
+     */
+    private String remark;
+
+    private  List<LayUiTree> menus;
 
 
 
