@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * <p>
  * 用户和角色关联表 Mapper 接口
@@ -17,4 +19,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserRoleDao extends BaseMapper<UserRole> {
 
+    List<Integer> findMenuIdsByRoleId(Integer roleId);
 }

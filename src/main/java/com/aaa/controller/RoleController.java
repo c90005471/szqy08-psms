@@ -1,10 +1,8 @@
 package com.aaa.controller;
 
 
-import com.aaa.entity.LayUiTable;
-import com.aaa.entity.Result;
-import com.aaa.entity.Role;
-import com.aaa.entity.RoleVo;
+import com.aaa.aop.SaveOrUpdateEntityAnn;
+import com.aaa.entity.*;
 import com.aaa.service.RoleService;
 import com.aaa.util.MyConstants;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
@@ -41,7 +39,6 @@ public class RoleController  extends  BaseController{
      */
     @RequestMapping("/toShowRole")
     public String toShowRole(){
-        System.out.println("11111111111");
         return "role/showRole";
     }
 
@@ -58,6 +55,8 @@ public class RoleController  extends  BaseController{
         Wrapper<Role> wrapper = new EntityWrapper<>();
         //逻辑删除
         wrapper.eq("del_flag", 0);
+        //排序
+        wrapper.orderBy("role_sort",true);
         List<Role> roleList = roleService.selectList(wrapper);
         int count = roleService.selectCount(wrapper);
         LayUiTable roleTable = new LayUiTable();
@@ -68,8 +67,16 @@ public class RoleController  extends  BaseController{
         return roleTable;
     }
 
+    /**
+     * @create by: Teacher陈
+     * @description: 添加角色，并指定角色对应的菜单
+     * @create time: 2020/7/19 18:36
+     * @param roleVo
+     * @return Result
+     */
     @RequestMapping("/saveRole")
     @ResponseBody
+    @SaveOrUpdateEntityAnn(entityClass = RoleVo.class)
     public Result saveRole(@RequestBody RoleVo roleVo){
 
         boolean save = roleService.saveRoleAndMenus(roleVo);
@@ -78,6 +85,48 @@ public class RoleController  extends  BaseController{
         } else {
             return super.error();
         }
+    }
+    @RequestMapping("/updateRole")
+    @ResponseBody
+    @SaveOrUpdateEntityAnn(entityClass = RoleVo.class)
+    public Result updateRole(@RequestBody RoleVo roleVo){
+
+        boolean update = roleService.updateRoleAndMenus(roleVo);
+        if (update) {
+            return super.success();
+        } else {
+            return super.error();
+        }
+    }
+    /**
+     * @create by: Teacher陈
+     * @description: 删除角色，并且把相关的用户中间表和菜单中间表也同时删除
+     * @create time: 2020/7/19 21:10
+     * @param role
+     * @return Result
+     */
+    @RequestMapping("/deleteRole")
+    @ResponseBody
+    public  Result deleteRole(Role role){
+        boolean delete = roleService.deleteRoleAndMenus(role);
+        if (delete) {
+            return super.success();
+        } else {
+            return super.error();
+        }
+    }
+    /**
+     * @create by: Teacher陈
+     * @description: 返回角色对应的菜单列表
+     * @create time: 2020/7/19 22:04
+     * @param roleId
+     * @return Result
+     */
+    @RequestMapping("/findMenuIdsByRoleId")
+    @ResponseBody
+    public Result findMenuIdsByRoleId(Integer roleId){
+        List<Integer>  menuIds=roleService.findMenuIdsByRoleId(roleId);
+        return success(menuIds);
     }
 }
 

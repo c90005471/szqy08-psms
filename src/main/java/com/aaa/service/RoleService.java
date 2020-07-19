@@ -20,4 +20,10 @@ public interface RoleService extends IService<Role> {
     List<Role> selectListByUserId(Integer userId);
 
     boolean saveRoleAndMenus(RoleVo roleVo);
+
+    boolean deleteRoleAndMenus(Role role);
+
+    List<Integer>  findMenuIdsByRoleId(Integer roleId);
+
+    boolean updateRoleAndMenus(RoleVo roleVo);
 }
