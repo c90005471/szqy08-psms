@@ -13,9 +13,11 @@ import com.baomidou.mybatisplus.plugins.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -44,10 +46,12 @@ public class UserController  extends  BaseController{
         List<Dept> deptList = deptService.selectList(null);
         //查询所有的角色信息，填充到页面下拉框中
         List<Role> roleList = roleService.selectList(null);
+
         model.addAttribute("deptList", deptList);
         model.addAttribute("roleList", roleList);
         return "user/showUser";
     }
+
     /**
      * create by: Teacher陈
      * description: 返回所有的用户信息，包含部门信息
@@ -138,6 +142,99 @@ public class UserController  extends  BaseController{
             return success();
         }
         return error();
+    }
+    @RequestMapping("/updateUser")
+    @ResponseBody
+    @SaveOrUpdateEntityAnn(entityClass = User.class)
+    /**
+     * @create by: Teacher陈
+     * @description: 修改用户
+     * @create time: 2020/7/18 19:32
+     * @param user
+     * @return com.aaa.entity.Result
+     */
+    public Result updateUser(User user){
+        boolean update = userService.updateUserAndSalt(user);
+        if(update){
+            return success();
+        }
+        return error();
+    }
+    /**
+     * @create by: Teacher陈
+     * @description: 删除用户（逻辑删除）
+     * @create time: 2020/7/19 13:44
+     */
+    @RequestMapping("/deleteUser")
+    @ResponseBody
+    public Result deleteUser(User user){
+        user.setDelFlag("1");
+        boolean update = userService.updateById(user);
+        if(update){
+            return success();
+        }
+        return error();
+    }
+    /**
+     * @create by: Teacher陈
+     * @description: 根据用户id查询自己的角色
+     * @create time: 2020/7/18 21:28
+     */
+    @RequestMapping("/getRoleCheckByUserId")
+    @ResponseBody
+    public Result getRoleCheckByUserId(Integer userId){
+        List<Role> roleUserList = roleService.selectListByUserId(userId);
+        List<Role> roleList = roleService.selectList(null);
+        Map map = new HashMap();
+        for (Role role : roleList) {
+            if(roleUserList.contains(role)){
+                map.put(role.getRoleKey(), true);
+            }else {
+                map.put(role.getRoleKey(), false);
+            }
+        }
+        System.out.println(map.toString());
+        return success(map);
+    }
+
+    /**
+     * @create by: Teacher陈
+     * @description: 重置密码
+     * @create time: 2020/7/19 15:16
+     */
+    @RequestMapping("/resetPassword")
+    @ResponseBody
+    public  Result resetPassword(User user){
+        boolean update = userService.resetPassword(user);
+        if(update){
+            return success();
+        }
+        return error();
+    }
+    /**
+     * @create by: Teacher陈
+     * @description: 批量删除用户
+     * @create time: 2020/7/19 15:20
+     * @param userList
+     * @return Result
+     */
+    @RequestMapping(value = "/deleteBatchUser")
+    @ResponseBody
+    public Result deleteBatchUser(@RequestBody List<User> userList) {
+        List<User> userListNew = new ArrayList<>();
+        //此处是逻辑删除，修改delflag
+        for (User user : userList) {
+            User userNew = new User();
+            userNew.setDelFlag("1");
+            userNew.setUserId(user.getUserId());
+            userListNew.add(userNew);
+        }
+        boolean update = userService.updateBatchById(userListNew);
+        if (update) {
+            return super.success();
+        } else {
+            return super.error();
+        }
     }
 }
 

@@ -24,4 +24,6 @@ import java.util.Map;
 //@CacheNamespace(implementation= MybatisCache.class,eviction=MybatisCache.class)
 public interface UserDao extends BaseMapper<User> {
     List<UserVo> selectUserVoList(Page<UserVo> pageInfo, @Param("condition")  Map<String ,Object> condition);
+    int updateUserColumById(User user);
+    int resetPassword(User user);
 }

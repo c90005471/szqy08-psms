@@ -2,7 +2,6 @@ package com.aaa.service;
 
 import com.aaa.entity.User;
 import com.aaa.entity.UserVo;
-import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.baomidou.mybatisplus.service.IService;
 
@@ -21,5 +20,7 @@ public interface UserService extends IService<User> {
 
     List<UserVo> selectUserVoList( Page<UserVo> pageInfo, Map<String ,Object> condition);
     boolean saveUserAndSalt(User user);
+    boolean updateUserAndSalt(User user);
+    boolean resetPassword(User user);
 
 }

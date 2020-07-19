@@ -1,12 +1,14 @@
 package com.aaa.entity;
 
-import com.baomidou.mybatisplus.enums.IdType;
-import java.util.Date;
-import com.baomidou.mybatisplus.annotations.TableId;
-import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
+
 import java.io.Serializable;
+import java.util.Date;
+import java.util.Objects;
 
 /**
  * <p>
@@ -172,17 +174,34 @@ public class Role extends Model<Role> {
     @Override
     public String toString() {
         return "Role{" +
-        "roleId=" + roleId +
-        ", roleName=" + roleName +
-        ", roleKey=" + roleKey +
-        ", roleSort=" + roleSort +
-        ", status=" + status +
-        ", delFlag=" + delFlag +
-        ", createBy=" + createBy +
-        ", createTime=" + createTime +
-        ", updateBy=" + updateBy +
-        ", updateTime=" + updateTime +
-        ", remark=" + remark +
-        "}";
+                "roleId=" + roleId +
+                ", roleName=" + roleName +
+                ", roleKey=" + roleKey +
+                ", roleSort=" + roleSort +
+                ", status=" + status +
+                ", delFlag=" + delFlag +
+                ", createBy=" + createBy +
+                ", createTime=" + createTime +
+                ", updateBy=" + updateBy +
+                ", updateTime=" + updateTime +
+                ", remark=" + remark +
+                "}";
+    }
+
+   @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        } ;
+        Role role = (Role) o;
+        return Objects.equals(roleId, role.roleId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(roleId);
     }
 }

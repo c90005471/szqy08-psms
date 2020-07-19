@@ -4,7 +4,10 @@ import com.aaa.entity.Role;
 import com.aaa.dao.RoleDao;
 import com.aaa.service.RoleService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * <p>
@@ -16,5 +19,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class RoleServiceImpl extends ServiceImpl<RoleDao, Role> implements RoleService {
+    @Autowired
+    private  RoleDao roleDao;
+    @Override
+    public List<Role> selectListByUserId(Integer userId) {
 
+        return roleDao.selectListByUserId(userId);
+    }
 }
