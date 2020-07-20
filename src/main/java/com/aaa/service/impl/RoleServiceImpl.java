@@ -36,6 +36,13 @@ public class RoleServiceImpl extends ServiceImpl<RoleDao, Role> implements RoleS
         return roleDao.selectListByUserId(userId);
     }
 
+    /**
+     * @create by: Teacher陈
+     * @description: 保存角色和对应的中间表
+     * @create time: 2020/7/20 8:53
+     * @param roleVo
+     * @return boolean
+     */
     @Override
     public boolean saveRoleAndMenus(RoleVo roleVo) {
         Role role = new Role();

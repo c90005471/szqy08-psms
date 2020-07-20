@@ -39,7 +39,6 @@ public class UserController  extends  BaseController{
     DeptService deptService;
     @Autowired
     RoleService roleService;
-
     @RequestMapping("/toShowUser")
     public String toShowUser(Model model){
         //查询所有的部门信息，填充到页面下拉框中
@@ -94,13 +93,9 @@ public class UserController  extends  BaseController{
             table.setData(userVoList);
             table.setCount(userListCount);
             long end = System.currentTimeMillis();
-            System.out.println("============查询花费时间："+(end-start)+"============");
-            return table;
-        }else
-        {
-
-            return table;
+           /* System.out.println("============查询花费时间："+(end-start)+"============");*/
         }
+        return table;
 
     }
 
