@@ -1,9 +1,11 @@
 package com.aaa.controller;
 
 
+import com.aaa.aop.SaveOrUpdateEntityAnn;
 import com.aaa.entity.LayUiTable;
 import com.aaa.entity.LayUiTree;
 import com.aaa.entity.Menu;
+import com.aaa.entity.Result;
 import com.aaa.service.MenuService;
 import com.aaa.util.MyConstants;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +26,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("/menu")
-public class MenuController {
+public class MenuController extends  BaseController{
     @Autowired
     private MenuService menuService;
 
@@ -68,6 +70,24 @@ public class MenuController {
         table.setData(menuList);
         table.setCount(menuList.size());
         return table;
+    }
+    /**
+     * @create by: Teacher陈
+     * @description: 保存菜单
+     * @create time: 2020/7/21 1:16
+     * @param menu
+     * @return Result
+     */
+    @RequestMapping("/saveMenu")
+    @ResponseBody
+    @SaveOrUpdateEntityAnn(entityClass = Menu.class)
+    public Result saveMenu(Menu menu){
+        boolean insert = menuService.insert(menu);
+        if (insert) {
+            return super.success();
+        } else {
+            return super.error();
+        }
     }
 }
 
