@@ -182,6 +182,7 @@ public class UserController  extends  BaseController{
         List<Role> roleList = roleService.selectList(null);
         Map map = new HashMap();
         for (Role role : roleList) {
+            //判断集合包含对象，必须重写equals和hashcode方法
             if(roleUserList.contains(role)){
                 map.put(role.getRoleKey(), true);
             }else {

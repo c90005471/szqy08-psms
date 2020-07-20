@@ -70,7 +70,6 @@ public class UserServiceImpl extends ServiceImpl<UserDao, User> implements UserS
     }
     @Override
     public boolean updateUserAndSalt(User user) {
-        //获取从页面传入的角色id,因为salt是在后台生成，所有由salt属性传入角色id的集合
         String roleIds = user.getSalt();
         //将用户保存到数据库
         Integer update = userDao.updateUserColumById(user);

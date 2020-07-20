@@ -56,6 +56,7 @@ public class TreeUtil {
             {
                 //将menu转成tree对象
                 LayUiTree layUiTree=fromMenuToTree(menu);
+                //递归设置自己的孩子
                 children.add(setTreeChilren(layUiTree,menuList));
             }
         }
