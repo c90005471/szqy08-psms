@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -35,8 +36,14 @@ public class MenuServiceImpl extends ServiceImpl<MenuDao, Menu> implements MenuS
      * @return java.util.List<com.aaa.entity.LayUiTree>
      */
     public List<LayUiTree> findMenus(String loginName) {
-        //查询出所有的menu
-        List<Menu> menuList = menuDao.findMenusByLoginName(loginName);
+        List<Menu> menuList=new ArrayList<>();
+        if(null!=loginName){
+            //查询出所有的menu根据登录名字
+            menuList = menuDao.findMenusByLoginName(loginName);
+        }else {
+            //查询出所有的menu
+            menuList=menuDao.selectList(null);
+        }
         //将List<Menu>换成 List<LayUiTree>
         List<LayUiTree> treeList = TreeUtil.fromMenuListToTreeList(menuList);
         return treeList;
@@ -47,14 +54,14 @@ public class MenuServiceImpl extends ServiceImpl<MenuDao, Menu> implements MenuS
      * description: 根据登录用户名放回此用户关联的所有权限关键字
      * create time: 2020/7/28 16:22
      *
-     * @return a
-     * @Param: null     */
+     * @return Set<String>
+     * @Param: loginName     */
     @Override
     public Set<String> findAllMenusByLoginName(String loginName){
         //查询出所有的menu
         List<Menu> menuList = menuDao.findMenusByLoginName(loginName);
         //过滤重复关键字
-        Set<String> perms=new HashSet<String>();
+        Set<String> perms=new HashSet<>();
         for (Menu menu : menuList) {
             if (menu.getPerms() != null&&menu.getPerms().length()>0) {
                 perms.add(menu.getPerms());
