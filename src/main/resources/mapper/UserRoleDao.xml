@@ -16,6 +16,6 @@
     <select id="findMenuIdsByRoleId" parameterType="integer" resultType="java.lang.Integer">
         select rm.menu_id from tbl_role_menu rm inner join tbl_menu m on rm.menu_id=m.menu_id
         where rm.role_id=#{roleId} and m.menu_type='F'
-    </select>
+</select>
 
 </mapper>

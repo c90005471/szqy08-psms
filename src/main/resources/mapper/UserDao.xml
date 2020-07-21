@@ -52,12 +52,16 @@
     </sql>
 <!--    更新用户表的部分列-->
     <update id="updateUserColumById" parameterType="com.aaa.entity.User">
-        update  tbl_user set dept_id=#{deptId},
+        update  tbl_user set
+        user_name=#{userName},
+        dept_id=#{deptId},
         email=#{email},
         phonenumber=#{phonenumber},
         sex=#{sex},
         avatar=#{avatar},
         status=#{status},
+        update_by=#{updateBy},
+        update_time=#{updateTime},
         remark=#{remark}
         where user_id=#{userId}
     </update>

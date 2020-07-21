@@ -11,6 +11,11 @@
     <link th:href="@{css/login.css}" rel="stylesheet"/>
     <!-- 全局js -->
     <script th:src="@{/js/jquery-1.10.2.js}"></script>
+<!--    解决session过期跳转到登录页并跳出iframe框架-->
+    <script language="JavaScript">
+        if (window != top)
+            top.location.href = location.href;
+    </script>
 </head>
 <body class="signin">
 <div class="signinpanel">

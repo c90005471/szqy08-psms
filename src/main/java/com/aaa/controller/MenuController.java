@@ -2,16 +2,15 @@ package com.aaa.controller;
 
 
 import com.aaa.aop.SaveOrUpdateEntityAnn;
-import com.aaa.entity.LayUiTable;
-import com.aaa.entity.LayUiTree;
-import com.aaa.entity.Menu;
-import com.aaa.entity.Result;
+import com.aaa.entity.*;
 import com.aaa.service.MenuService;
+import com.aaa.service.RoleMenuService;
 import com.aaa.util.MyConstants;
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.baomidou.mybatisplus.mapper.Wrapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -29,6 +28,8 @@ import java.util.List;
 public class MenuController extends  BaseController{
     @Autowired
     private MenuService menuService;
+    @Autowired
+    private RoleMenuService roleMenuService;
 
     // List<LayUiTree> layUiTreeList = menuService.findMenus(username);
 
@@ -84,6 +85,59 @@ public class MenuController extends  BaseController{
     public Result saveMenu(Menu menu){
         boolean insert = menuService.insert(menu);
         if (insert) {
+            return super.success();
+        } else {
+            return super.error();
+        }
+    }
+    /**
+     * @create by: Teacher陈
+     * @description: 根据menuid删除menu
+     * @create time: 2020/7/21 16:08
+     * @param menuId
+     * @return Result
+     */
+    @RequestMapping("/deleteMenu")
+    @ResponseBody
+    public  Result deleteMenu(Integer menuId){
+        //删除menu表
+        boolean deleteMenu = menuService.deleteById(menuId);
+        //删除role_menu中间表
+        Wrapper<RoleMenu> wrapper = new EntityWrapper<>();
+        wrapper.eq("menu_id",menuId);
+        boolean deleteRoleMenu = roleMenuService.delete(wrapper);
+        if (deleteMenu && deleteRoleMenu) {
+            return super.success();
+        } else {
+            return super.error();
+        }
+    }
+    /**
+     * @create by: Teacher陈
+     * @description: 按照菜单id查询菜单名称
+     * @create time: 2020/7/21 20:48
+     * @param menuId
+     * @return Result
+     */
+    @RequestMapping("/findParentNameId")
+    @ResponseBody
+    public  Result  findParentNameId(Integer menuId){
+        Menu menu = menuService.selectById(menuId);
+        if(null!=menu){
+            return  success(menu);
+        }else {
+            //menuId为0的时候，返回的对象是空，防止返回前台为空
+            Menu menuName = new Menu();
+            return  success(menuName);
+        }
+    }
+
+    @RequestMapping("/updateMenu")
+    @ResponseBody
+    @SaveOrUpdateEntityAnn(entityClass = Menu.class)
+    public  Result updateMenu(Menu menu){
+        boolean update = menuService.updateById(menu);
+        if (update) {
             return super.success();
         } else {
             return super.error();

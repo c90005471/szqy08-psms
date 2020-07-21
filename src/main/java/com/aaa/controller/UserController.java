@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -61,8 +62,11 @@ public class UserController  extends  BaseController{
      */
     @RequestMapping("/selectAllUser")
     @ResponseBody
-    public LayUiTable selectAllUser(Integer page, Integer limit, String searchLoginName, String searchUserName, String searchPhonenumber){
-
+    public LayUiTable selectAllUser(HttpSession session,Integer page, Integer limit, String searchLoginName, String searchUserName, String searchPhonenumber){
+/*        int sessionTimeout = session.getServletContext().getSessionTimeout();
+        System.out.println(sessionTimeout);
+        long timeout = SecurityUtils.getSubject().getSession().getTimeout();
+        System.out.println(timeout);*/
         LayUiTable table = new LayUiTable();
         //多条件查询所需要的集合
         Map<String ,Object> condition= new HashMap(16);

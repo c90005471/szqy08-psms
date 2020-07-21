@@ -232,7 +232,7 @@
 </div>
 <script type="text/html" id="toolbarDemo">
     <div class="layui-btn-container">
-        <button class="layui-btn layui-btn-sm" lay-event="addDept">添加</button>
+        <button class="layui-btn layui-btn-sm" lay-event="addUser">添加</button>
         <button class="layui-btn layui-btn-danger layui-btn-sm" lay-event="deleteBatch">删除</button>
     </div>
 </script>
@@ -298,7 +298,7 @@
             var checkStatus = table.checkStatus(obj.config.id)
                 , data = checkStatus.data; //获取选中的数据
             switch (obj.event) {
-                case 'addDept':
+                case 'addUser':
                     layer.open({
                         title: '添加员工',
                         type: 1,
