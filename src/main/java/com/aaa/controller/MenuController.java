@@ -8,6 +8,7 @@ import com.aaa.service.RoleMenuService;
 import com.aaa.util.MyConstants;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.mapper.Wrapper;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -121,6 +122,7 @@ public class MenuController extends  BaseController{
      */
     @RequestMapping("/findParentNameId")
     @ResponseBody
+    @RequiresPermissions("system:menu:list")
     public  Result  findParentNameId(Integer menuId){
         Menu menu = menuService.selectById(menuId);
         if(null!=menu){

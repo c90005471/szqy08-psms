@@ -90,6 +90,7 @@ public class ShiroConfig {
         shiroFilterFactoryBean.setFilterChainDefinitionMap(map);
         //修改登录页面，所有的未认证的请求都给我滚，滚去登录
         shiroFilterFactoryBean.setLoginUrl("/toLogin");
+        /*shiroFilterFactoryBean.setUnauthorizedUrl("/toUnanthorPage");*/
         return shiroFilterFactoryBean;
     }
     /**

@@ -236,5 +236,10 @@ public class UserController  extends  BaseController{
             return super.error();
         }
     }
+
+    @RequestMapping("/toBasicInformation")
+    public String toBasicInformation(){
+        return "basicInformation";
+    }
 }
 
