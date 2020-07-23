@@ -7,6 +7,7 @@ import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,10 +25,9 @@ public class LoginController {
     public String toLogin(){
         return "login";
     }
-
     @RequestMapping("/login")
     public   String login(String username,String password,Model model){
-       //使用shiro安全框架的认证实现登录逻辑
+        //使用shiro安全框架的认证实现登录逻辑
         //登录验证
         System.out.println(username+password);
         //获取shiro的连接器
@@ -60,5 +60,15 @@ public class LoginController {
         return "login";
     }
 
+    /**
+     * @create by: Teacher陈
+     * @description: 测试方法，测试shiro权限注解
+     * @create time: 2020/7/23 20:15
+     */
+    @RequestMapping("/testUnanthor")
+    @RequiresPermissions("system:xxx:yyy")
+    public void testUnanthor(){
+        System.out.println("=============");
+    }
 
 }
